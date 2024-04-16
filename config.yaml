@@ -1,0 +1,33 @@
+
+model_path:
+  small: "/home/tushar/workspace/cahtwithpdf/models/mistral-7b-instruct-v0.1.Q5_K_M.gguf"
+  large: "/home/tushar/workspace/cahtwithpdf/models/llama-2-7b-chat.Q5_K_M.gguf"
+
+model_type: "mistral"
+model_config: 
+  'max_new_tokens': 512
+  'temperature' : 0.001
+  'context_length': 2048
+  'gpu_layers' : 0 # 32 to put all mistral layers on GPU,
+  'threads' : -1
+
+embeddings_path: "BAAI/bge-large-en-v1.5"
+
+chat_config:
+  chat_memory_length: 2
+  number_of_retrieved_documents: 2
+
+pdf_text_splitter:
+  chunk_size: 1024 # number of characters 1024 roughly equels 256 tokens
+  overlap: 50
+  separators: ["\n", "\n\n"]
+
+
+
+chromadb:
+  chromadb_path: "chroma_db"
+  collection_name: "pdfs"
+
+chat_history_path : "/home/tushar/workspace/cahtwithpdf/chat_sessions/"
+
+chat_sessions_database_path: "./chat_sessions/chat_sessions.db"

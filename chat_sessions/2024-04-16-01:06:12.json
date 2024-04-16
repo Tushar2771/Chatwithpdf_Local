@@ -1,0 +1,1 @@
+[{"content": "hi", "additional_kwargs": {}, "response_metadata": {}, "type": "human", "name": null, "id": null, "example": false}, {"content": " Hello! It's nice to meet you. How can I assist you today?\n", "additional_kwargs": {}, "response_metadata": {}, "type": "ai", "name": null, "id": null, "example": false, "tool_calls": [], "invalid_tool_calls": []}]
