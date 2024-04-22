@@ -1,0 +1,25 @@
+
+model_path:
+  small: "/home/shavak-hcdc/chatwithpdf/chatwithpdf_v.02/models/llama-2-7b-chat.Q8_0.gguf"
+
+
+embeddings_path: "BAAI/bge-m3"
+
+chat_config:
+  chat_memory_length: 2
+  number_of_retrieved_documents: 2
+
+pdf_text_splitter:
+  chunk_size: 1024 # number of characters 1024 roughly equels 256 tokens
+  overlap: 200
+  separators: ["\n", "\n\n"]
+
+
+
+chromadb:
+  chromadb_path: "chroma_db"
+  collection_name: "pdfs"
+
+chat_history_path : "/home/shavak-hcdc/chatwithpdf/chatwithpdf_v.02/chat_sessions/"
+
+chat_sessions_database_path: "./chat_sessions/chat_sessions.db"
